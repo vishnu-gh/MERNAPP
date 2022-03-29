@@ -9,5 +9,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use('/api/goals',require('./routes/goalRoutes'));
-app.use(errorHandler)
-;app.listen(SERVER_PORT, ()=>console.log(`Server running on port ${SERVER_PORT}`));
+app.use('/api/users',require('./routes/userRoutes'));
+app.use(errorHandler);
+app.listen(SERVER_PORT, ()=>console.log(`Server running on port ${SERVER_PORT}`));
