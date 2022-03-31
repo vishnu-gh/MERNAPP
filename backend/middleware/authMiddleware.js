@@ -16,7 +16,7 @@ if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
     res.status(401);
     throw new Error('Not authorised')
  }} else{
-     res.status(401);
+     res.status(402);
      throw new Error('Not Authorised, no token')
  }
 })
